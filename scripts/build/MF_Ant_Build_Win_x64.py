@@ -38,6 +38,9 @@ def build_programs():
     dataversion = 'vsam'
     set64bit = 'true'
 
+    debug1 = os.getenv("JOB_NAME")
+    write_log(debug1)
+
     #determine where the Micro Focus product has been installed
     install_dir = set_MF_environment (os_type)
     if install_dir is None:
@@ -65,8 +68,7 @@ def build_programs():
     cwd = os.getcwd()
     build_file = os.path.join(cwd, 'ant_Build_Win_x64.xml')
     #buildinfo = jenkins_client.
-    debug1 = os.getenv("JOB_NAME")
-    write_log(debug1)
+ 
     source_dir = 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\CSP_MVP_Pipeline\\GitHub\\BankDemo\\sources'
     # This may a better location rather than asset_repo: everything in one place - may need change to Jenkinsfile to create loadlib dir?
     asset_repo = 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\CSP_MVP_Pipeline\\Release\CSP_MVP_Pipeline_Release\\system\\loadlib'
