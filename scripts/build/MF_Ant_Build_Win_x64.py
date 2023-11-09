@@ -18,6 +18,10 @@ WITH THIS SOFTWARE.
 Description:  A script to build application. 
 """
 
+"""
+This is Jan's version 
+"""
+
 import os
 import sys
 import subprocess
