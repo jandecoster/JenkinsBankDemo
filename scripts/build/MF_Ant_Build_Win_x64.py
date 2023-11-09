@@ -43,6 +43,7 @@ def build_programs():
     write_log("Janss debug info *********************************")
     write_log(debug1)
     write_log(os.getcwd())
+    write_log('C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\' + debug1 + '\\GitHub\\BankDemo\\sources')
     write_log("Janss debug info *********************************")
 
     #determine where the Micro Focus product has been installed
