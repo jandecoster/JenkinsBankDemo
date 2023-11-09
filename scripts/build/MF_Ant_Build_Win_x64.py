@@ -38,12 +38,13 @@ def build_programs():
     dataversion = 'vsam'
     set64bit = 'true'
 
+    # Jan's stuff
     job = os.getenv("JOB_NAME")
     
     write_log("Janss debug info *********************************")
     write_log(job)
     write_log(os.getcwd())
-    write_log('C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\' + debug1 + '\\GitHub\\BankDemo\\sources')
+    write_log('C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\' + job + '\\GitHub\\BankDemo\\sources')
     write_log("Janss debug info *********************************")
 
     #determine where the Micro Focus product has been installed
