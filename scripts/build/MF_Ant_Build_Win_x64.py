@@ -39,7 +39,11 @@ def build_programs():
     set64bit = 'true'
 
     debug1 = os.getenv("JOB_NAME")
+    
+    write_log("Janss debug info *********************************")
     write_log(debug1)
+    write_log(os.getcwd())
+    write_log("Janss debug info *********************************")
 
     #determine where the Micro Focus product has been installed
     install_dir = set_MF_environment (os_type)
