@@ -25,7 +25,7 @@ This is Jan's version
 import os
 import sys
 import subprocess
-import jenkins
+#import jenkins
 
 from pathlib import Path
 from utilities.output import write_log 
