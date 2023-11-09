@@ -38,10 +38,10 @@ def build_programs():
     dataversion = 'vsam'
     set64bit = 'true'
 
-    debug1 = os.getenv("JOB_NAME")
+    job = os.getenv("JOB_NAME")
     
     write_log("Janss debug info *********************************")
-    write_log(debug1)
+    write_log(job)
     write_log(os.getcwd())
     write_log('C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\' + debug1 + '\\GitHub\\BankDemo\\sources')
     write_log("Janss debug info *********************************")
@@ -74,9 +74,13 @@ def build_programs():
     build_file = os.path.join(cwd, 'ant_Build_Win_x64.xml')
     #buildinfo = jenkins_client.
  
-    source_dir = 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\CSP_MVP_Pipeline\\GitHub\\BankDemo\\sources'
+    source_dir = 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\'+ job +'\\GitHub\\BankDemo\\sources'
+    #source_dir = 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\CSP_MVP_Pipeline\\GitHub\\BankDemo\\sources'
+    
     # This may a better location rather than asset_repo: everything in one place - may need change to Jenkinsfile to create loadlib dir?
-    asset_repo = 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\CSP_MVP_Pipeline\\Release\CSP_MVP_Pipeline_Release\\system\\loadlib'
+    asset_repo = 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\' + job + '\\Release\CSP_MVP_Pipeline_Release\\system\\loadlib'
+    #asset_repo = 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\CSP_MVP_Pipeline\\Release\CSP_MVP_Pipeline_Release\\system\\loadlib'
+    
     #asset_repo = 'C:\Asset_Repo\BANKDEMO\system\loadlib'
 
     #execute ant
