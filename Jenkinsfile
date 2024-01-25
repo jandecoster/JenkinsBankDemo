@@ -22,12 +22,12 @@ node {
     stage('Create release folder structure') {  
     	dir('Release') {
 		powershell '''
-		New-Item -Path CSP_MVP_Pipeline_Release\\system -ItemType directory
-		New-Item -Path CSP_MVP_Pipeline_Release\\system\\catalog -ItemType directory
-		New-Item -Path CSP_MVP_Pipeline_Release\\system\\catalog\\data -ItemType directory
-		New-Item -Path CSP_MVP_Pipeline_Release\\system\\loadlib -ItemType directory
-		New-Item -Path CSP_MVP_Pipeline_Release\\system\\logs -ItemType directory
-		New-Item -Path CSP_MVP_Pipeline_Release\\system\\rdef -ItemType directory
+		New-Item -Path Hackathon_Pipeline_Release\\system -ItemType directory
+		New-Item -Path Hackathon_Pipeline_Release\\system\\catalog -ItemType directory
+		New-Item -Path Hackathon_Pipeline_Release\\system\\catalog\\data -ItemType directory
+		New-Item -Path Hackathon_Pipeline_Release\\system\\loadlib -ItemType directory
+		New-Item -Path Hackathon_Pipeline_Release\\system\\logs -ItemType directory
+		New-Item -Path Hackathon_Pipeline_Release\\system\\rdef -ItemType directory
 		'''
 	}
     }
@@ -80,9 +80,9 @@ node {
     stage('Release') {
 	//Create System Release folder structure
 	powershell '''
-	Copy-Item -Path "GitHub\\BankDemo\\datafiles\\*" -Destination "Release\\CSP_MVP_Pipeline_Release\\system\\catalog\\data"
-	Copy-Item -Path "GitHub\\BankDemoJenkins\\config\\dfhdrdat" -Destination "Release\\CSP_MVP_Pipeline_Release\\system\\rdef\\dfhdrdat"
-	Compress-Archive -Path "Release\\CSP_MVP_Pipeline_Release\\system" -DestinationPath "Release\\CSP_MVP_Pipeline_Release_$env:BUILD_ID.zip"
+	Copy-Item -Path "GitHub\\BankDemo\\datafiles\\*" -Destination "Release\\Hackathon_Pipeline_Release\\system\\catalog\\data"
+	Copy-Item -Path "GitHub\\BankDemoJenkins\\config\\dfhdrdat" -Destination "Release\\Hackathon_Pipeline_Release\\system\\rdef\\dfhdrdat"
+	Compress-Archive -Path "Release\\Hackathon_Pipeline_Release\\system" -DestinationPath "Release\\Hackathon_Pipeline_Release_$env:BUILD_ID.zip"
 	'''
 	dir ('Release'){
 		archiveArtifacts artifacts: '*.zip', fingerprint: true

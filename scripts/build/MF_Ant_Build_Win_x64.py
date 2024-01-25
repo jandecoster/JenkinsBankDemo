@@ -79,7 +79,7 @@ def build_programs():
     #source_dir = 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\CSP_MVP_Pipeline\\GitHub\\BankDemo\\sources'
     
     # This may a better location rather than asset_repo: everything in one place - may need change to Jenkinsfile to create loadlib dir?
-    asset_repo = 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\' + job + '\\Release\CSP_MVP_Pipeline_Release\\system\\loadlib'
+    asset_repo = 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\' + job + '\\Release\Hackathon_Pipeline_Release\\system\\loadlib'
     #asset_repo = 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\CSP_MVP_Pipeline\\Release\CSP_MVP_Pipeline_Release\\system\\loadlib'
     
     #asset_repo = 'C:\Asset_Repo\BANKDEMO\system\loadlib'
