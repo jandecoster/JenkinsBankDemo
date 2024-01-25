@@ -112,11 +112,11 @@
             "mfCommsProcessList": [
                 {
                     "mfStructVersion": 5,
-                    "CN": "BANKVSAM1",
+                    "CN": "HACKBANK1",
                     "mfUID": "1.3.6.1.4.1.5043.1.21.6.63eca1d4.2980.126",
                     "mfPID": "process 4704",
                     "mfError": "Stopped OK",
-                    "mfConfig": "[soap]\r\nregion=BANKVSAM\r\n",
+                    "mfConfig": "[soap]\r\nregion=HACKBANK\r\n",
                     "mfRequestedEndpoint": "tcp:*:*",
                     "mfRequestedEndpointMulti": [
                         "tcp:*:*"
@@ -354,7 +354,7 @@
             "mfJESInitiatorList": [
                 {
                     "mfStructVersion": 1,
-                    "CN": "BANKVSAM",
+                    "CN": "HACKBANK",
                     "mfUID": "1.3.6.1.4.1.5043.1.21.12.63eca1d4.2980.138",
                     "mfServerUID": "1.3.6.1.4.1.5043.1.21.1.63eca1d4.2980.125",
                     "mfJESInitiatorClass": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
