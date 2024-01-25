@@ -4,12 +4,12 @@
     "mfServerList": [
         {
             "mfStructVersion": 26,
-            "CN": "BANKVSAM",
+            "CN": "HACKBANK",
             "mfUID": "1.3.6.1.4.1.5043.1.21.1.63eca1d4.2980.125",
             "description": "Test Region",
             "mfError": "",
             "mfStatusHistory": "",
-            "mfConfig": "[ES-Environment]\nESP=C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Hackathon\\Release\\Hackathon_Pipeline_Release\\system\nMFJ_RELOAD_IEASYM00=Y\nMF_CHARSET=A\nCASRDO44_NEWSUB=N\nEXTFH=$ESP/config/EXTFH.cfg",
+            "mfConfig": "[ES-Environment]\nESP=C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Hackathon_Pipeline\\Release\\Hackathon_Pipeline_Release\\system\nMFJ_RELOAD_IEASYM00=Y\nMF_CHARSET=A\nCASRDO44_NEWSUB=N\nEXTFH=$ESP/config/EXTFH.cfg",
             "mfMajorVersion": 0,
             "mfMinorVersion": 0,
             "mfBuildVersion": 0,
